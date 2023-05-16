@@ -5,8 +5,10 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.imageContainer}>
-        <p>Escola blah</p>
-        <div className={styles.gradient}/>
+        <div className={styles.gradient} />
+        <h1>Escola blah</h1>
+        <h2>O seu futuro bem blah</h2>
+
         <Image
           src="/front-image.jpg"
           alt=""
@@ -14,6 +16,10 @@ export default function Home() {
           className={styles.imageContainerImage}
         />
       </div>
+
+      <div className={styles.div}>
+      </div>
+
     </main>
   )
 }
