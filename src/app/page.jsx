@@ -1,13 +1,24 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
+import Section from "@/components/Section";
+import Image from "next/image";
+import styles from "../styles/page.module.css";
 
 export default function Home() {
   return (
     <main className={styles.main}>
+      <NavBar />
+
       <div className={styles.imageContainer}>
         <div className={styles.gradient} />
-        <h1>Escola blah</h1>
-        <h2>O seu futuro bem blah</h2>
+
+        <div className={styles.textDiv}>
+          <h1>Escola Freinet</h1>
+          <h2>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </h2>
+        </div>
 
         <Image
           src="/front-image.jpg"
@@ -17,9 +28,12 @@ export default function Home() {
         />
       </div>
 
-      <div className={styles.div}>
-      </div>
+      <Section 
+        title={"Blah"}
+        content={"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."}
+      />
 
+      <Footer />
     </main>
-  )
+  );
 }

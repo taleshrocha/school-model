@@ -1,0 +1,23 @@
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  height: 4rem;
+  width: 100%;
+  padding: 1rem;
+  z-index: 5;
+}
+
+.navBar button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: filter 0.5s ease;
+}
+
+.navBar button:hover {
+  filter: brightness(0.8);
+}
