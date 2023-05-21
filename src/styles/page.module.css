@@ -11,6 +11,8 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
+
+  padding: .5rem;
 }
 
 .imageContainerImage {
@@ -19,15 +21,26 @@
   height: 100%;
 }
 
+.image {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.image.slideIn {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 .gradient {
   position: absolute;
   width: 100%;
   height: 100%;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, .8) 0%,
     rgba(0, 0, 0, 0) 50%,
-    rgba(0, 0, 0, 0.7) 100%
+    rgba(0, 0, 0, .8) 100%
   );
   z-index: 1;
 }
@@ -44,8 +57,11 @@
 }
 
 .textDiv {
+  color: white;
   animation: fade-in-up 0.75s ease-out;
+  padding: .5rem;
   z-index: 1;
+
 }
 
 .textDiv h1 {

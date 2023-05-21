@@ -9,6 +9,8 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 
+  --primary-color: #f7d114;
+  --secondary-color: #f3a310;
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,
@@ -40,6 +42,7 @@
   --card-border-rgb: 131, 134, 135;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -72,6 +75,7 @@
     --card-border-rgb: 200, 200, 200;
   }
 }
+*/
 
 * {
   box-sizing: border-box;

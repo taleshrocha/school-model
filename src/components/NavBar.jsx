@@ -5,6 +5,7 @@ import {
 AiFillCloseCircle as CloseIcon
 } from "react-icons/ai";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function NavBar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -12,7 +13,14 @@ export default function NavBar() {
   return (
     <nav className={`${styles.navBar} ${isMenuClicked && styles.clicked}`}>
       <div>
-        <p>Hello</p>
+        <Image 
+          src="/logo.png"
+          alt=""
+          height={50}
+          width={50}
+          quality={100}
+          unoptimized = {true}
+        />
         <button onClick={() => setIsMenuClicked(!isMenuClicked)}>
           {isMenuClicked ? (
             <CloseIcon size={30} />
