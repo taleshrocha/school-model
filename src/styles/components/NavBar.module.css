@@ -1,20 +1,31 @@
 .navBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
 
   height: 4rem;
   width: 100%;
   padding: 1rem;
   z-index: 5;
+
+  transition: all 0.5s ease-out;
+}
+
+.navBar.clicked {
+  background-color: black;
+  height: 100%;
+}
+
+.navBar div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
 }
 
 .navBar button {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0 0.5rem;
   transition: filter 0.5s ease;
 }
 

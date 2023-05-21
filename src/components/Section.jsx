@@ -1,10 +1,12 @@
 import styles from "../styles/components/Section.module.css"
 
-export default function Section({title, content}) {
+export default function Section({children, style}) {
   return (
-    <section className={styles.section}>
-      <h1>{title}</h1>
-      <p>{content}</p>
+    <section 
+      className={styles.section}
+      style={style}
+    >
+      {children}
     </section>
   )
 }

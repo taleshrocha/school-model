@@ -28,10 +28,13 @@ export default function Home() {
         />
       </div>
 
-      <Section 
-        title={"Blah"}
-        content={"Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."}
-      />
+      <Section style={{ backgroundColor: "gray" }}>
+        <h1>batata</h1>
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+      </Section>
 
       <Footer />
     </main>
