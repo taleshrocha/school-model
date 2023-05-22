@@ -22,12 +22,16 @@
 }
 
 .image {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.5s ease-out;
+  border-radius: 30px;
 }
 
-.image.slideIn {
+.div {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .5s ease-out;
+}
+
+.div.slideIn {
   opacity: 1;
   transform: translateY(0px);
 }

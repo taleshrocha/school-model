@@ -15,9 +15,8 @@ export default function Home() {
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
       },
-      { rootMargin: "-100px" }
+      { rootMargin: "0% 0% -40% 0%" }
     );
-    console.log(isIntersecting);
     observer.observe(ref.current);
 
     return () => observer.disconnect();
@@ -47,20 +46,21 @@ export default function Home() {
       </div>
 
       <Section>
-        <h1>Lorem ipsum</h1>
-        <Image
-          src="/escola.jpeg"
-          alt=""
-          height={200}
-          width={200}
-          unoptimized={true}
-          ref={ref}
-          className={`${styles.image} ${isIntersecting && styles.slideIn}`}
-        />
-        <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
-        </p>
+        <div ref={ref} className={`${styles.div} ${isIntersecting && styles.slideIn}`}>
+          <h1>Fundamental I</h1>
+          <Image
+            src="/escola.jpeg"
+            alt=""
+            height={200}
+            width={200}
+            unoptimized={true}
+            className={`${styles.image}`}
+          />
+          <p>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </p>
+        </div>
       </Section>
 
       <Footer />
