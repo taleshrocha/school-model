@@ -7,29 +7,55 @@ import { useEffect, useRef, useState } from "react";
 import styles from "../styles/page.module.css";
 
 export default function Home() {
-  const [isIntersecting, setIsIntersecting] = useState(false);
-  const ref = useRef(null);
+  const [slideUpAni, setSlideUpAni] = useState(false);
+  const [slideCenterAni, setSlideCenterAni] = useState(false);
+  const [fadeOutAni, setFadeOutAni] = useState(false)
 
+  const slideUpRef = useRef(null);
+  const slideCenterRef = useRef(null);
+  const fadeOutRef = useRef(null);
+
+  // Manage observers for the slide animations
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    const slideUpAniObserver = new IntersectionObserver(
       ([entry]) => {
-        setIsIntersecting(entry.isIntersecting);
+        setSlideUpAni(entry.isIntersecting);
       },
       { rootMargin: "0% 0% -40% 0%" }
     );
-    observer.observe(ref.current);
 
-    return () => observer.disconnect();
-  }, [isIntersecting]);
+    const slideCenterAniObserver = new IntersectionObserver(
+      ([entry]) => {
+        setSlideCenterAni(entry.isIntersecting);
+      },
+      { rootMargin: "0% 0% -20% 0%" }
+    );
+
+    const fadeOutAniObserver = new IntersectionObserver(
+      ([entry]) => {
+        setFadeOutAni(entry.isIntersecting);
+      },
+      { rootMargin: "0% 0% -30% 0%" }
+    );
+
+    slideUpAniObserver.observe(slideUpRef.current);
+    slideCenterAniObserver.observe(slideCenterRef.current);
+    fadeOutAniObserver.observe(fadeOutRef.current);
+
+    return () => {
+      slideUpAniObserver.disconnect();
+      slideCenterAniObserver.disconnect();
+    };
+  }, [slideUpAni, slideCenterAni]);
 
   return (
     <main className={styles.main}>
       <NavBar />
 
-      <div className={styles.imageContainer}>
-        <div className={styles.gradient} />
+      <div className={styles.container}>
+        <div className={styles.gradientOverlay} />
 
-        <div className={styles.textDiv}>
+        <div className={styles.textContainer}>
           <h1>Escola Freinet</h1>
           <h2>
             Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
@@ -41,12 +67,15 @@ export default function Home() {
           src="/front.jpeg"
           alt=""
           fill
-          className={styles.imageContainerImage}
+          className={styles.imageContainer}
         />
       </div>
 
       <Section>
-        <div ref={ref} className={`${styles.div} ${isIntersecting && styles.slideIn}`}>
+        <div
+          ref={slideUpRef}
+          className={`${styles.slideUp} ${slideUpAni && styles.slideBack}`}
+        >
           <h1>Fundamental I</h1>
           <Image
             src="/escola.jpeg"
@@ -54,9 +83,60 @@ export default function Home() {
             height={200}
             width={200}
             unoptimized={true}
-            className={`${styles.image}`}
+            className={`${styles.roundedImage}`}
           />
           <p>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div>
+          <h1>BLAH</h1>
+          <Image
+            src="/escola.jpeg"
+            alt=""
+            height={50}
+            width={50}
+            unoptimized={true}
+            ref={slideCenterRef}
+            className={`${styles.slideLeft} ${
+              slideCenterAni && styles.slideBack
+            }`}
+          />
+
+          <h1>BLAH2</h1>
+          <Image
+            src="/escola.jpeg"
+            alt=""
+            height={50}
+            width={50}
+            unoptimized={true}
+            ref={slideCenterRef}
+            className={`${styles.slideRight} ${
+              slideCenterAni && styles.slideBack
+            }`}
+          />
+          <p>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </p>
+        </div>
+      </Section>
+
+      <Section>
+        <div 
+          className={`${styles.fadeOut} ${fadeOutAni && styles.fadeIn}`}
+          ref={fadeOutRef}
+        >
+          <h1>BLAH</h1>
+          <p>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
             Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
             cillum sint consectetur cupidatat.
           </p>
