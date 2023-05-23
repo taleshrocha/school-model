@@ -1,0 +1,54 @@
+.div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 12rem;
+  overflow: hidden;
+}
+
+.verticalLine {
+  border-left: 1px solid gray;
+  height: 10rem;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.imageTopLeft {
+  transform: translateX(-50px);
+  transition: all 1s ease-out;
+  height: 4rem;
+  width: 4rem;
+
+  position: absolute;
+  top: 0;
+  left: 1rem;
+}
+
+.imageDownLeft {
+  transform: translate(-50px, -25px);
+  transition: all 1s ease-out;
+  height: 5rem;
+  width:  5rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 1.2rem;
+}
+
+.imageCenterRight {
+  transform: translate(50px, -50px);
+  transition: all 1.5s ease-out;
+  height: 5rem;
+  width:  5rem;
+
+  position: absolute;
+  right: 1rem;
+}
+
+
+.slideBack {
+  transform: translate(0px, 0px);
+}

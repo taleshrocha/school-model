@@ -11,6 +11,13 @@
 
   --primary-color: #f7d114;
   --secondary-color: #f3a310;
+  --gradient: linear-gradient(to top right, var(--primary-color) , var(--secondary-color));
+  --white: #FFFFFF;
+  --silver: #DDDDDD;
+  --gray: #AAAAAA;
+  --dark-gray: #777777;
+  --black: #111111;
+
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
     #16abff33 0deg,

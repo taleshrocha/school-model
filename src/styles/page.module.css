@@ -2,6 +2,16 @@
   min-height: 100vh;
 }
 
+.section {
+  background: var(--silver);
+}
+
+.section p {
+  padding: 1rem;
+  text-align: center;
+  color: var(--black);
+}
+
 .container {
   position: relative;
   display: flex;
@@ -80,6 +90,10 @@
 .fadeOut {
   opacity: 0;
   transition: all .7s ease-out;
+}
+
+.fadeOut p {
+  color: var(--dark-gray);
 }
 
 .fadeIn {
