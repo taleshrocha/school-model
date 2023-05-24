@@ -1,4 +1,5 @@
 "use client";
+import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import ImageDownDisplay from "@/components/ImageDownDisplay";
 import ImageTopDisplay from "@/components/ImageTopDisplay";
@@ -23,7 +24,9 @@ export default function Home() {
   useEffect(() => {
     const slideUpAniObserver = new IntersectionObserver(
       ([entry]) => {
-        if (!slideUpAni) setSlideUpAni(entry.isIntersecting);
+        if (!slideUpAni) {
+          setSlideUpAni(entry.isIntersecting);
+        }
       },
       { rootMargin: "0% 0% -40% 0%" }
     );
@@ -32,7 +35,7 @@ export default function Home() {
       ([entry]) => {
         if (!slideCenterAni) {
           setSlideCenterAni(entry.isIntersecting);
-          console.log(slideCenterAni)
+          console.log("SlideCenter", slideCenterAni);
         }
       },
       { rootMargin: "0% 0% -40% 0%" }
@@ -40,7 +43,10 @@ export default function Home() {
 
     const imageDownDisplayAniObserver = new IntersectionObserver(
       ([entry]) => {
-        if (!imageDownDisplayAni) setImageDownDisplayAni(entry.isIntersecting);
+        if (!imageDownDisplayAni) {
+          setImageDownDisplayAni(entry.isIntersecting);
+          console.log("ImageDown", imageDownDisplayAni);
+        }
       },
       { rootMargin: "0% 0% -40% 0%" }
     );
@@ -60,8 +66,8 @@ export default function Home() {
     return () => {
       slideUpAniObserver.disconnect();
       slideCenterAniObserver.disconnect();
-      imageDownDisplayAniObserver.observe(imageDownDisplayRef.current);
-      fadeOutAniObserver.observe(fadeOutRef.current);
+      imageDownDisplayAniObserver.disconnect();
+      fadeOutAniObserver.disconnect();
     };
   }, [slideUpAni, slideCenterAni, imageDownDisplayAni, fadeOutAni]);
 
@@ -69,6 +75,7 @@ export default function Home() {
     <main className={styles.main}>
       <NavBar />
 
+      {/*Front image and text*/}
       <div className={styles.container}>
         <div className={styles.gradientOverlay} />
 
@@ -88,26 +95,17 @@ export default function Home() {
         />
       </div>
 
-      <Section>
-        <div
-          ref={slideUpRef}
-          className={`${styles.slideUp} ${slideUpAni && styles.slideBack}`}
-        >
-          <h1>Fundamental I</h1>
-          <Image
-            src="/escola.jpeg"
-            alt=""
-            height={200}
-            width={200}
-            unoptimized={true}
-            className={`${styles.roundedImage}`}
-          />
-          <p>
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-            cillum sint consectetur cupidatat.
-          </p>
-        </div>
-      </Section>
+      {/*Fundamental I*/}
+      <section
+        ref={slideUpRef}
+        className={`${styles.fund1Section} ${slideUpAni && styles.slideBack}`}
+      >
+        <Banner />
+        <p>
+          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          cillum sint consectetur cupidatat.
+        </p>
+      </section>
 
       <section className={styles.section}>
         <ImageTopDisplay isAnimating={slideCenterAni} ref={slideCenterRef} />

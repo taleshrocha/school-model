@@ -11,7 +11,10 @@
 
   --primary-color: #f7d114;
   --secondary-color: #f3a310;
-  --gradient: linear-gradient(to top right, var(--primary-color) , var(--secondary-color));
+  --gradient-bottom: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+  --gradient-top: linear-gradient(to top, var(--secondary-color), var(--primary-color));
+  --gradient-left: linear-gradient(to left, var(--secondary-color), var(--primary-color));
+  --gradient-right: linear-gradient(to right, var(--secondary-color), var(--primary-color));
   --white: #FFFFFF;
   --silver: #DDDDDD;
   --gray: #AAAAAA;

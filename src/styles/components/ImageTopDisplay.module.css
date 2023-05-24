@@ -9,8 +9,9 @@
 }
 
 .verticalLine {
-  border-left: 1px solid gray;
   height: 10rem;
+  width: 2px;
+  background-image: var(--gradient-top);
 
   position: absolute;
   top: 0;

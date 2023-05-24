@@ -27,7 +27,6 @@ export default function NavBar() {
 
     window.addEventListener('scroll', handleScroll);
 
-    console.log(isScrollDown);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
