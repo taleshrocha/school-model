@@ -5,6 +5,7 @@ import ImageDownDisplay from "@/components/ImageDownDisplay";
 import ImageTopDisplay from "@/components/ImageTopDisplay";
 import NavBar from "@/components/NavBar";
 import Section from "@/components/Section";
+import LevelSection from "@/components/sections/LevelSection";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import styles from "../styles/page.module.css";
@@ -96,16 +97,17 @@ export default function Home() {
       </div>
 
       {/*Fundamental I*/}
-      <section
+      <LevelSection 
         ref={slideUpRef}
-        className={`${styles.fund1Section} ${slideUpAni && styles.slideBack}`}
-      >
-        <Banner />
-        <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
-        </p>
-      </section>
+        isAnimating={slideUpAni}
+      />
+
+      {/*Fundamental II*/}
+      <LevelSection 
+        ref={slideUpRef}
+        isAnimating={slideUpAni}
+      />
+
 
       <section className={styles.section}>
         <ImageTopDisplay isAnimating={slideCenterAni} ref={slideCenterRef} />

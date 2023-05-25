@@ -4,13 +4,15 @@
   align-items: center;
   justify-items: center;
   justify-content: space-between;
+  position: relative;
+
   margin: 0 .3rem 0 .3rem;
   border-radius: 10px 10px 0 0;
   padding: 0.5rem;
   background-color: var(--silver);
 }
 
-.footer div {
+.buttonDiv {
   display: flex;
   justify-content: space-between;
   padding: .5rem;
@@ -28,4 +30,14 @@
 
   color: var(--secondary-color);
   box-shadow:  0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.verticalLine {
+  height: 6rem;
+  width: 2px;
+  background-image: var(--gradient-bottom);
+
+  transform: translateY(-30%);
+  position: absolute;
+  top: 0;
 }

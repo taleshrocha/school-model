@@ -1,0 +1,32 @@
+.section {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease-out;
+}
+
+.section h1 {
+  margin: 1rem 0 1rem 0;
+}
+
+.section p {
+  font-size: larger;
+}
+
+.section span {
+  margin-top: .5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  width: 100%;
+}
+
+.slideBack {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}

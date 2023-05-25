@@ -9,7 +9,8 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div>
+      <div className={styles.verticalLine} />
+      <div className={styles.buttonDiv}>
         <LinkButton Icon={FacebookLogoIcon} href={"https://www.google.com"} />
 
         <LinkButton Icon={InstagramLogoIcon} href={"https://www.google.com"} />
