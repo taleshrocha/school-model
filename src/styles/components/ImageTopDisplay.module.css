@@ -18,38 +18,68 @@
 }
 
 .imageTopLeft {
+  aspect-ratio: 16 / 9;
+  width: 25%;
+
+  top: 1rem;
+  left: 4rem;
+
   transform: translateX(-50px);
   transition: all 1s ease-out;
-  height: 4rem;
-  width: 4rem;
-
-  position: absolute;
-  top: 0;
-  left: 1rem;
 }
 
-.imageDownLeft {
-  transform: translate(-50px, -25px);
-  transition: all 1s ease-out;
-  height: 5rem;
-  width:  5rem;
+.imageBottomLeft {
+  aspect-ratio: 1 / 1;
+  width: 12%;
 
-  position: absolute;
   bottom: 0;
-  left: 1.2rem;
+  left: 1rem;
+
+  transform: translate(-50px, 20px);
+  transition: all 1s ease-out;
+}
+
+.imageCenterLeft {
+  aspect-ratio: 1 / 1;
+  width: 16%;
+
+  bottom: 0;
+  left: 16rem;
+
+  transform: translate(-50px, 20px);
+  transition: all 1s ease-out;
+}
+
+.imageBottomRight {
+  aspect-ratio: 1 / 1;
+  width: 16%;
+
+  bottom: 0;
+  right: 4rem;
+
+  transform: translate(-50px, 20px);
+  transition: all 1s ease-out;
 }
 
 .imageCenterRight {
-  transform: translate(50px, -50px);
-  transition: all 1.5s ease-out;
-  height: 5rem;
-  width:  5rem;
+  aspect-ratio: 16 / 9;
+  width: 25%;
 
-  position: absolute;
-  right: 1rem;
+  top: 2rem;
+  right: 12rem;
+
+  transform: translate(-50px, 20px);
+  transition: all 1s ease-out;
 }
+
 
 
 .slideBack {
   transform: translate(0px, 0px);
+}
+
+@media (min-width: 700px) {
+  .div {
+    height: 24rem;
+  }
 }

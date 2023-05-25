@@ -12,7 +12,7 @@
 
 
   width: 90vw;
-  height: 16rem;
+  height: 90vw;
 
   border: 2px solid var(--secondary-color);
   border-radius: 20px;
@@ -50,4 +50,12 @@
 
 .image {
   object-fit: cover;
+}
+
+/* PC */
+@media (min-width: 700px) {
+  .border {
+    width: 50vw;
+    height: 50vw;
+  }
 }

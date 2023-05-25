@@ -1,0 +1,9 @@
+.imageDiv {
+  height: auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}

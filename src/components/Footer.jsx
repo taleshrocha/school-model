@@ -9,21 +9,37 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={styles.verticalLine} />
-      <div className={styles.buttonDiv}>
-        <LinkButton Icon={FacebookLogoIcon} href={"https://www.google.com"} />
+      <div className={styles.div}>
+        <div className={styles.verticalLine} />
 
-        <LinkButton Icon={InstagramLogoIcon} href={"https://www.google.com"} />
+        <div className={styles.links}>
+          <p>Blah</p>
+          <p>Blah</p>
+          <p>Blah</p>
+          <p>Blah</p>
+        </div>
+
+        <p>Siga nossas redes</p>
+        <div className={styles.buttonDiv}>
+          <LinkButton Icon={FacebookLogoIcon} href={"https://www.google.com"} />
+
+          <LinkButton
+            Icon={InstagramLogoIcon}
+            href={"https://www.google.com"}
+          />
+        </div>
+
+        <Image
+          src="/logo.png"
+          alt=""
+          height={50}
+          width={50}
+          quality={100}
+          unoptimized={true}
+        />
+
+
       </div>
-
-      <Image
-        src="/logo.png"
-        alt=""
-        height={50}
-        width={50}
-        quality={100}
-        unoptimized={true}
-      />
     </footer>
   );
 }
