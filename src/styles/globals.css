@@ -11,15 +11,32 @@
 
   --primary-color: #f7d114;
   --secondary-color: #f3a310;
-  --gradient-bottom: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-  --gradient-top: linear-gradient(to top, var(--secondary-color), var(--primary-color));
-  --gradient-left: linear-gradient(to left, var(--secondary-color), var(--primary-color));
-  --gradient-right: linear-gradient(to right, var(--secondary-color), var(--primary-color));
-  --white: #FFFFFF;
-  --silver: #DDDDDD;
-  --gray: #AAAAAA;
+  --gradient-bottom: linear-gradient(
+    to bottom,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  --gradient-top: linear-gradient(
+    to top,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  --gradient-left: linear-gradient(
+    to left,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  --gradient-right: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--primary-color)
+  );
+  --white: #ffffff;
+  --silver: #dddddd;
+  --gray: #aaaaaa;
   --dark-gray: #777777;
   --black: #111111;
+
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -118,4 +135,12 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+/*Tablet*/
+@media (min-width: 768px) {
+}
+
+/*PC*/
+@media (min-width: 1024px) {
 }

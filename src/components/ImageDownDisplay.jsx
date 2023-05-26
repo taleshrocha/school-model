@@ -1,34 +1,38 @@
 "use client";
-import styles from "../styles/components/ImageDownDisplay.module.css";
-import Image from "next/image";
+import styles from "../styles/components/ImageTopDisplay.module.css";
 import { forwardRef } from "react";
+import Img from "./Img";
 
 const ImageDownDisplay = forwardRef(({ isAnimating }, ref) => {
   return (
-    <div
-      className={styles.div}
-      ref={ref}
-    >
+    <div className={styles.div} ref={ref}>
       <div className={styles.verticalLine} />
 
-      <Image
-        src="/escola.jpeg"
-        alt=""
-        height={100}
-        width={100}
-        unoptimized={true}
+      <Img
+        src={"/sala1.jpg"}
         className={`${styles.imageTopLeft} ${isAnimating && styles.slideBack}`}
       />
-
-      <Image
-        src="/escola.jpeg"
-        alt=""
-        height={100}
-        width={100}
-        unoptimized={true}
-        className={`${styles.imageCenterRight} ${isAnimating && styles.slideBack
-          }`}
+      
+      <Img
+        src={"/indio.jpg"}
+        className={`${styles.imageBottomLeft} ${isAnimating && styles.slideBack}`}
       />
+      
+      <Img
+        src={"/selfie.jpg"}
+        className={`${styles.imageCenterLeft} ${isAnimating && styles.slideBack}`}
+      />
+
+      <Img
+        src={"/sala2.jpg"}
+        className={`${styles.imageBottomRight} ${isAnimating && styles.slideBack}`}
+      />
+
+      <Img
+        src={"/mask.jpg"}
+        className={`${styles.imageCenterRight} ${isAnimating && styles.slideBack}`}
+      />
+
     </div>
   );
 });

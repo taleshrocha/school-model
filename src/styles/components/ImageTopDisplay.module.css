@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 12rem;
+  height: 50vw;
   overflow: hidden;
 }
 
@@ -19,67 +19,67 @@
 
 .imageTopLeft {
   aspect-ratio: 16 / 9;
-  width: 25%;
+  width: 25vw;
 
-  top: 1rem;
-  left: 4rem;
+  top: 3vw;
+  left: 5vw;
 
-  transform: translateX(-50px);
-  transition: all 1s ease-out;
+  transform: translate(-10vw, -8vw);
+  transition: all 1.5s ease-out;
 }
 
 .imageBottomLeft {
   aspect-ratio: 1 / 1;
-  width: 12%;
+  width: 15vw;
 
   bottom: 0;
-  left: 1rem;
+  left: 2vw;
 
-  transform: translate(-50px, 20px);
+  transform: translate(-8vw, 6vw);
   transition: all 1s ease-out;
 }
 
 .imageCenterLeft {
   aspect-ratio: 1 / 1;
-  width: 16%;
+  width: 20vw;
 
-  bottom: 0;
-  left: 16rem;
+  bottom: 10vw;
+  left: 25vw;
 
-  transform: translate(-50px, 20px);
-  transition: all 1s ease-out;
+  transform: translate(4vw, 20vw);
+  transition: all 2s ease-out;
 }
 
 .imageBottomRight {
   aspect-ratio: 1 / 1;
-  width: 16%;
+  width: 20vw;
 
   bottom: 0;
-  right: 4rem;
+  right: 15vw;
 
-  transform: translate(-50px, 20px);
-  transition: all 1s ease-out;
+  transform: translate(10vw, 6vw);
+  transition: all 0.8s ease-out;
 }
 
 .imageCenterRight {
   aspect-ratio: 16 / 9;
-  width: 25%;
+  width: 28vw;
 
-  top: 2rem;
-  right: 12rem;
+  top: 8vw;
+  right: 20vw;
 
-  transform: translate(-50px, 20px);
-  transition: all 1s ease-out;
+  transform: translate(18vw, -16vw);
+  transition: all 1.3s ease-out;
 }
-
-
 
 .slideBack {
   transform: translate(0px, 0px);
 }
 
-@media (min-width: 700px) {
-  .div {
-    height: 24rem;
-  }
+/*Tablet*/
+@media (min-width: 768px) {
+}
+
+/*PC*/
+@media (min-width: 1024px) {
 }
